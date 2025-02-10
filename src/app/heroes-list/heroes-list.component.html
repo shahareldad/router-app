@@ -1,2 +1,14 @@
 <h3>HEROES</h3>
 <p>Get your heroes here</p>
+
+<div class="container">
+    <div class="row" *ngFor="let product of products">
+        <h4>{{product.name}}</h4>
+        <a class="button"
+            routerLink="/crisis-list/{{product.id}}"
+            routerLinkActive="activebutton"
+            ariaCurrentWhenActive="page">
+            {{product.name}} details
+        </a>
+    </div>
+</div>
